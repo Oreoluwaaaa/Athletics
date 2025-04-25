@@ -42,7 +42,7 @@ import {
       opponent:    p.get('opponent')    || 'elizabeth',
 
       // fallback to lastSessionCode if none in URL
-      sessionCode: localStorage.getItem('lastSessionCode') || p.get('sessionCode') ||  ''
+      sessionCode: p.get('sessionCode') ||  localStorage.getItem('lastSessionCode') || ''
     };
   }
   
