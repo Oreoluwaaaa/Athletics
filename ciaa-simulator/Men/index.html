@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Claflin University Athletics - Men's Basketball Simulator</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header><a href="../../stats-page/index.html" class="back">&larr; Home</a></header>
+  <div class="container">
+    <header>
+      <div class="header-top">
+        <h2>MEN'S BASKETBALL SIMULATOR</h2>
+      </div>
+      <nav class="navbutton">
+        <a href="../Women/index.html" class="toggle-btn">WOMEN'S</a>
+      </nav>
+    </header>
+
+    <div class="dropdown">
+      <div class="select-team">CLICK TO SELECT RIVAL TEAM</div>
+      <div class="all-teams">
+        <div>Bowie State University</div>
+        <div>Elizabeth City State University</div>
+        <div>Fayetteville State University</div>
+        <div>Johnson C. Smith University</div>
+        <div>Livingstone University</div>
+        <div>Lincoln University</div>
+        <div>Shaw University</div>
+        <div>St. Augustine's University</div>
+        <div>Virginia State University</div>
+        <div>Winston-Salem State University</div>
+      </div>
+    </div>
+
+    <h2 class="rival-team-name team-name">TEAM NAME</h2>
+    <p>Click on a player to select</p>
+    <div class="rivals"></div>
+
+    <h2 class="team-name">CLAFLIN UNIVERSITY</h2>
+    <p>Click on a player to select</p>
+    <div class="players"></div>
+
+    <h2>SELECTED RIVALS</h2>
+    <p>Click on a player to deselect</p>
+    <div class="selected-rivals"></div>
+
+    <h2>SELECTED CLAFLIN UNIVERSITY PLAYERS</h2>
+    <p>Click on a player to deselect</p>
+    <div class="selected-players"></div>
+
+    <button class="simulate-btn">Simulate</button>
+
+    <div class="score-board">
+      <table>
+        <tr>
+          <td>Claflin University</td>
+          <td id="claflin-points">Points</td>
+        </tr>
+        <tr>
+          <td id="rival-name">Team Name</td>
+          <td id="rival-points">Points</td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="claflin-stats"></div>
+    <div id="rival-stats"></div>
+  </div>
+
+  <script type="module" src="basketball_simulator.js"></script>
+</body>
+</html>

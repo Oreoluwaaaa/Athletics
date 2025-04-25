@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Athletics – Entry</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="entry">
+  <header>
+    <a href="index.html" class="back">&larr; Home</a>
+    <h1>Stat Entry</h1>
+  </header>
+  <main>
+    <button id="undoBtn" class="main-btn">Undo Last</button>
+    <section class="court-container">
+      <img src="./images/court.png" id="court" alt="Basketball court"/>
+      <canvas id="shotChart" width="400" height="400"></canvas>
+    </section>
+
+    <section class="tables">
+      <h2>Claflin University</h2>
+      <div id="cuTableContainer"></div>
+
+      <h2>Opponent</h2>
+      <div id="oppTableContainer"></div>
+    </section>
+  </main>
+
+  <script type="module" src="scripts/entry.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.container {
+  margin: 10px;
+  padding: 30px;
+}
+
+
+.dropdown {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.select-team {
+  padding: 10px;
+  background: #76202c;
+  cursor: pointer;
+  text-align: center;
+}
+
+.all-teams {
+  position: absolute;
+  background: #8e4545;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  border: 1px solid #ccc;
+  z-index: 10;
+}
+
+.all-teams div {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.all-teams div:hover {
+  background: #eee;
+}
+
+.players,
+.rivals {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.player,
+.rival {
+  padding: 10px;
+  margin: 10px;
+  width: 150px;
+  height: 150px;
+  background-color: rgba(216, 115, 13, 0.1);
+  color: rgba(249, 135, 5, 0.898);
+  border: 1px solid maroon;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.player:hover,
+.rival:hover {
+  transform: scale(1.1);
+}
+
+.selected-players,
+.selected-rivals {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 1px solid #ccc;
+  min-height: 50px;
+}
+
+.simulate-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: maroon;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.score-board {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.score-board table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.score-board td {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+}
+
+#claflin-stats,
+#rival-stats {
+  margin-top: 20px;
+  padding: 10px;
+  background: rgba(255, 228, 196, 0.3);
+  border-radius: 5px;
+  width: 90%;
+  font-size: 1rem;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#claflin-stats h3,
+#rival-stats h3 {
+  color: maroon;
+  font-size: 1.2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.toggle-btn {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: maroon;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+header {
+  display: flex;
+  padding: -10px 20px;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+header .image {
+  width: 350px; 
+  height: auto;
+  margin-right: 20px;
+}
+
+.header-top {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.navbutton {
+  width: 150px; 
+  text-align: right;
+}
+
+body {
+  background: url("./images/background4.png") center/cover no-repeat fixed;
+  color: #fff;
+}
+
+.back {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}

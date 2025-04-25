@@ -1,0 +1,284 @@
+/* ---------- Global reset ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Base typography & layout ---------- */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  background: #000;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* ---------- Header ---------- */
+header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+header h1 {
+  flex: 1;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.back {
+  padding: 0.25rem 0rem;
+  align-items: center;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+
+/* ---------- Home overlay ---------- */
+.home .overlay {
+  background: url('./images/background1.png') center / cover no-repeat fixed;
+  background-blend-mode: overlay;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 2rem;
+  min-height: 100vh;
+}
+.number-icons{
+  width: 35%;
+}
+/* ---------- Step blocks ---------- */
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step h2 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.step small {
+  font-size: 1rem;
+}
+
+/* ---------- Toggles & main buttons ---------- */
+.toggle,
+.main-btn {
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.toggle {
+  background: #bbb;
+  color: #000;
+}
+
+.toggle.active {
+  background: #872640;
+  color: #fff;
+}
+
+.main-btn {
+  background: #872640;
+}
+
+/* ---------- Court canvas ---------- */
+.court-container {
+  position: relative;
+  max-width: 400px;
+  margin: 1rem auto;
+}
+
+.court-container img {
+  width: 100%;
+  display: block;
+}
+
+#courtCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- Controls ---------- */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.controls fieldset {
+  border: 1px solid #444;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+/* ---------- Stats table ---------- */
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+.stats-table th,
+.stats-table td {
+  border: 1px solid #666;
+  padding: 0.25rem 0.5rem;
+  text-align: center;
+}
+
+.stats-table tr.active {
+  background: #0a0;
+}
+
+/* ---------- Legend ---------- */
+.legend {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.legend .dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+body {
+  background: url("./images/background.png") center/cover no-repeat fixed;
+}
+
+/* Legend colours */
+.cu-made  { background: #0f0; }
+.cu-miss  { background: #f00; }
+.opp-made { background: #00f; }
+.opp-miss { background: #a0f; }
+
+.entry {
+  background: url("./images/background4.png") center/cover no-repeat fixed;
+}
+
+.viewer {
+  background: url("./images/background4.png") center/cover no-repeat fixed;
+}
+
+
+.chart-container {
+  position: relative;
+  text-align: center;
+  margin: 1em;
+}
+#shotChart {
+  border: 1px solid #333;
+  background: url("./images/court.png") no-repeat center;
+  background-size: contain;
+  opacity: 1;
+  cursor: crosshair;
+}
+#chartHint {
+  font-size: 0.9em;
+  color: #666;
+}
+.table-container {
+  margin: 1em;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 
+    2ch repeat(1, minmax(6ch, max-content))
+    repeat(8, minmax(4ch, max-content));
+  gap: 0.5ch;
+  align-items: center;
+}
+.header-row {
+  font-weight: bold;
+  background: #ddd;
+  padding: 0.5em 0;
+}
+.grid > div {
+  padding: 0.3em;
+  background: white;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+.clickable {
+  cursor: pointer;
+  user-select: none;
+}
+.stat-btn {
+  display: inline-block;
+  width: 1.2em;
+  text-align: center;
+  margin: 0 0.1em;
+  font-weight: bold;
+}
+
+/* make any stat‐cell clickable */
+.clickableStats {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ✓/✗ buttons next to made/miss counts */
+.addShot {
+  cursor: pointer;
+  margin: 0 .25rem;
+  font-weight: bold;
+  user-select: none;
+}
+
+/* the number under each ✓/✗ */
+.count {
+  display: block;
+  margin-top: .25rem;
+  font-size: .9rem;
+}
+
+/* align legend items in viewer */
+.legend li {
+  display: flex;
+  align-items: center;
+}
+
+/* container for the viewer’s stats‐summary table */
+.stats-view {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.stats-table {
+  background: rgba(128, 128, 128, 0.8);
+}
+
+/* ✓ should be green, ✗ should be black */
+.addShot.tick { color: #4CBB17; }   /* green */
+.addShot.miss { color: #000; }      /* black */
+
+/* remove pointer cursor from attempts cells */
+.stats-table td:not(.clickableStats) {
+  cursor: default;
+}
+
+.status-on {
+  background-color: #4CBB17 !important;
+}
+#court {
+  display: none;
+}

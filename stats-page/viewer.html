@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Athletics – Viewer</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="viewer">
+  <header><a href="index.html" class="back">&larr; Home</a></header>
+  <main>
+    <section class="court-container">
+      <img src="./images/court.png" id="court" alt="Basketball court"/>
+      <canvas id="shotChart" width="400" height="400"></canvas>
+      <ul class="legend">
+        <li><span class="dot cu-made"></span>CU Made</li>
+        <li><span class="dot cu-miss"></span>CU Missed</li>
+        <li><span class="dot opp-made"></span>Opp Made</li>
+        <li><span class="dot opp-miss"></span>Opp Missed</li>
+      </ul>
+    </section>
+
+    <section class="stats-view">
+      <h2>Stats Summary</h2>
+      <table id="statsTable" class="stats-table"></table>
+    </section>
+  </main>
+
+  <script type="module" src="scripts/viewer.js"></script>
+</body>
+</html>

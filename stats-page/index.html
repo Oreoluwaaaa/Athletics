@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Athletics – Home</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="home">
+  <section class="overlay">
+    <div class="step">
+      <img class="number-icons" src="./images/number1.png" alt="1">
+      <h2><small>Select CU Team</small></h2>
+      <button id="mbbBtn" class="toggle active">MBB</button>
+      <button id="wbbBtn" class="toggle">WBB</button>
+    </div>
+    <div class="step">
+      <img class="number-icons" src="./images/number2.png" alt="2">
+      <h2><small>Select Opponent</small></h2>
+      <select id="opponentSelect"></select>
+    </div>
+    <div class="step">
+      <img class="number-icons" src="./images/number3.png" alt="3">
+      <h2><small>Get Started</small></h2>
+      <a id="entryLink" href="#" class="main-btn">Entry</a>
+      <a id="viewerLink" href="#" class="main-btn">Viewer</a>
+      <a href="../ciaa-simulator/Men/index.html" class="main-btn">Simulator</a>
+    </div>
+  </section>
+
+  <!-- load our app logic as an ES module -->
+  <script type="module" src="scripts/app.js"></script>
+</body>
+</html>
+
+
