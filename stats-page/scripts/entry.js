@@ -97,7 +97,7 @@ import {
       nm.textContent = p.Player.replace(/^#\d+\s*/, '');
       tr.append(num, nm);
   
-      // Status (max 5 per team)
+      // status (max 5 per team)
       const st = document.createElement('td');
       st.className = 'clickableStats';
       if (statsArray[i].status) st.classList.add('status-on');
@@ -140,7 +140,7 @@ import {
           td.textContent = statsArray[i][stat];
   
         } else {
-          // Paint increment on click
+          // paint increment on click
           td.className = 'clickableStats';
           td.textContent = statsArray[i][stat];
           td.addEventListener('click', () => {
@@ -205,7 +205,7 @@ import {
     canvas.style.cursor = 'default';
   });
   
-  // Undo button
+  // undo button
   const undoBtn = document.getElementById('undoBtn');
   if (undoBtn) {
     undoBtn.addEventListener('click', () => {

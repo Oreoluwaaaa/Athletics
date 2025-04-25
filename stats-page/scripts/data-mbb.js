@@ -200,6 +200,7 @@ export const lincolnPlayersData = [
   { "Player": "#0 Carson Howard" }
 ];
 
+// to sort in numerical order
 [
   playersData,
   elizabethPlayersData,

@@ -27,7 +27,7 @@ class BasketballTeam {
 
 class BasketballSimulator {
   constructor() {
-    // Using playersData for Claflin; adjust as needed.
+    // claflin players' data
     this.teams = {
       claflin: new BasketballTeam("Claflin University", playersData),
       rival: null
@@ -42,13 +42,13 @@ class BasketballSimulator {
     this.initializeUI();
   }
 
-  // Helper: safely convert a value to a number with a fallback.
+  // convert a value to a number with a fallback.
   static safeNumber(val, fallback = 0) {
     const n = Number(val);
     return isNaN(n) ? fallback : n;
   }
 
-  // Helper: Parse a percentage string (or number) and return its numeric value.
+  // parse a percentage string (or number) and return its numeric value.
   static parsePercentage(value) {
     const result = typeof value === 'string'
       ? parseFloat(value.replace('%', ''))
@@ -104,7 +104,7 @@ class BasketballSimulator {
           event.target.textContent.trim(),
           teamsDataMap[selectedTeamName]
         );
-        // Update the rival team name in the header and later in the scoreboard.
+        // rival team name in the header and later in the scoreboard.
         this.dom.rivalTeamName.textContent = this.teams.rival.teamName;
         this.loadRivalPlayers();
         this.dom.allTeamsDiv.style.maxHeight = "0px";
@@ -203,8 +203,7 @@ class BasketballSimulator {
     };
   }
 
-  // Updated performance score calculation using your original logic,
-  // but now employing safeNumber and parsePercentage.
+  // performance score calculation
   simulateTeamPerformance(selectedPlayersContainer) {
     const players = Array.from(selectedPlayersContainer.children)
       .map(card => JSON.parse(card.dataset.stats));
@@ -215,16 +214,20 @@ class BasketballSimulator {
       const ft = BasketballSimulator.parsePercentage(player["FT%"]);
       const astTO = BasketballSimulator.safeNumber(player.Ast, 0) / Math.max(1, BasketballSimulator.safeNumber(player.TO, 1));
       const stlTO = BasketballSimulator.safeNumber(player.Stl, 0) / Math.max(1, BasketballSimulator.safeNumber(player.TO, 1));
-      // Scale PPP by 100 for comparable weighting.
+
+      // scale PPP by 100 for comparable weighting.
       const ppp = BasketballSimulator.safeNumber(player.PPP, 0) * 100;
-      // Base score with chosen weights.
+
+      // base score with chosen weights.
       let baseScore = 0.25 * fg + 0.15 * three + 0.2 * astTO + 0.1 * stlTO + 0.2 * ft + 0.1 * ppp;
-      // Incorporate usage: weight by Poss relative to average Poss.
+
+      // incorporate usage: weight by Poss relative to average Poss.
       const totalPoss = players.reduce((sum, p) => sum + BasketballSimulator.safeNumber(p.Poss, 1), 0);
       const avgPoss = totalPoss / players.length;
       player.performanceScore = baseScore * ( BasketballSimulator.safeNumber(player.Poss, 1) / avgPoss );
     });
 
+    // compute total score
     const totalScore = players.reduce((sum, player) => sum + player.performanceScore, 0);
     let totalPoints = 0;
     let individualPoints = {};
@@ -274,7 +277,7 @@ class BasketballSimulator {
   }
 
   displayResults(results) {
-    // Update the scoreboard table with actual team names.
+    // scoreboard table
     const homeCell = document.querySelector("table tr:first-child td:first-child");
     if (homeCell) {
       homeCell.textContent = this.teams.claflin.teamName;

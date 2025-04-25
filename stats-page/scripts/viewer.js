@@ -1,3 +1,5 @@
+// import roster
+
 import {
     playersData as mbbPlayers, elizabethPlayersData as elizMbb,
     bowiePlayersData as bowieMbb, shawPlayersData as shawMbb,
@@ -12,6 +14,7 @@ import {
     livingstonePlayersData as livingstoneWbb, johnsonPlayersData as johnsonWbb
   } from './data-wbb.js';
   
+  // dots colour
   const colorMap = {
     'CU|true':  '#4CBB17',
     'CU|false': '#f00',
@@ -37,8 +40,9 @@ import {
     return {
       team:        p.get('team')        || 'mbb',
       opponent:    p.get('opponent')    || 'elizabeth',
-      // FALLBACK to lastSessionCode if none in URL
-      sessionCode: p.get('sessionCode') || localStorage.getItem('lastSessionCode') || ''
+
+      // fallback to lastSessionCode if none in URL
+      sessionCode: localStorage.getItem('lastSessionCode') || p.get('sessionCode') ||  ''
     };
   }
   
@@ -51,9 +55,9 @@ import {
   } else {
     const state = JSON.parse(raw);
   
-    // --- Shot-chart drawing ---
-    const courtImgEl = document.getElementById('court');       // your <img id="court">
-    const canvas     = document.getElementById('shotChart');   // your <canvas id="shotChart">
+    // shot chart
+    const courtImgEl = document.getElementById('court');     
+    const canvas     = document.getElementById('shotChart');   
     const ctx        = canvas.getContext('2d');
   
     function setupCanvas() {
@@ -80,7 +84,7 @@ import {
       courtImgEl.addEventListener('load', setupCanvas);
     }
   
-    // --- Stats summary table ---
+    // stats summary table
     const cuData  = team === 'mbb' ? mbbPlayers : wbbPlayers;
     const oppData = opponentsMap[team][opponent];
     const tbl     = document.getElementById('statsTable');
@@ -99,7 +103,7 @@ import {
     function addRows(label, roster, statsArr) {
       statsArr.forEach((st, i) => {
         const tr = document.createElement('tr');
-        // Team, number, name
+        // team, number, name
         [
           label,
           roster[i].Player.match(/#(\d+)/)[1],

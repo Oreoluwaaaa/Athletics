@@ -1,3 +1,4 @@
+// import data
 import {
     playersData as mbbPlayers, elizabethPlayersData as elizMbb,
     bowiePlayersData as bowieMbb, shawPlayersData as shawMbb,
@@ -12,6 +13,7 @@ import {
     livingstonePlayersData as livingstoneWbb, johnsonPlayersData as johnsonWbb
   } from './data-wbb.js';
   
+  //teams data maps
   const teams = {
     mbb: {
       label: 'MBB',
@@ -39,6 +41,7 @@ import {
     }
   };
   
+  // buttons
   const mbbBtn = document.getElementById('mbbBtn');
   const wbbBtn = document.getElementById('wbbBtn');
   const opponentSelect = document.getElementById('opponentSelect');

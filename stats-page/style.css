@@ -1,11 +1,10 @@
-/* ---------- Global reset ---------- */
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* ---------- Base typography & layout ---------- */
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: #fff;
@@ -18,7 +17,6 @@ a {
   color: #fff;
 }
 
-/* ---------- Header ---------- */
 header {
   display: flex;
   align-items: center;
@@ -39,7 +37,6 @@ header h1 {
   border-radius: 4px;
 }
 
-/* ---------- Home overlay ---------- */
 .home .overlay {
   background: url('./images/background1.png') center / cover no-repeat fixed;
   background-blend-mode: overlay;
@@ -52,7 +49,7 @@ header h1 {
 .number-icons{
   width: 35%;
 }
-/* ---------- Step blocks ---------- */
+
 .step {
   display: flex;
   flex-direction: column;
@@ -68,7 +65,6 @@ header h1 {
   font-size: 1rem;
 }
 
-/* ---------- Toggles & main buttons ---------- */
 .toggle,
 .main-btn {
   padding: 0.5rem 1rem;
@@ -93,7 +89,6 @@ header h1 {
   background: #872640;
 }
 
-/* ---------- Court canvas ---------- */
 .court-container {
   position: relative;
   max-width: 400px;
@@ -113,7 +108,6 @@ header h1 {
   height: 100%;
 }
 
-/* ---------- Controls ---------- */
 .controls {
   display: flex;
   flex-wrap: wrap;
@@ -128,7 +122,6 @@ header h1 {
   border-radius: 4px;
 }
 
-/* ---------- Stats table ---------- */
 .stats-table {
   width: 100%;
   border-collapse: collapse;
@@ -146,7 +139,6 @@ header h1 {
   background: #0a0;
 }
 
-/* ---------- Legend ---------- */
 .legend {
   list-style: none;
   display: flex;
@@ -165,7 +157,6 @@ body {
   background: url("./images/background.png") center/cover no-repeat fixed;
 }
 
-/* Legend colours */
 .cu-made  { background: #0f0; }
 .cu-miss  { background: #f00; }
 .opp-made { background: #00f; }
@@ -179,12 +170,12 @@ body {
   background: url("./images/background4.png") center/cover no-repeat fixed;
 }
 
-
 .chart-container {
   position: relative;
   text-align: center;
   margin: 1em;
 }
+
 #shotChart {
   border: 1px solid #333;
   background: url("./images/court.png") no-repeat center;
@@ -192,13 +183,16 @@ body {
   opacity: 1;
   cursor: crosshair;
 }
+
 #chartHint {
   font-size: 0.9em;
   color: #666;
 }
+
 .table-container {
   margin: 1em;
 }
+
 .grid {
   display: grid;
   grid-template-columns: 
@@ -207,21 +201,25 @@ body {
   gap: 0.5ch;
   align-items: center;
 }
+
 .header-row {
   font-weight: bold;
   background: #ddd;
   padding: 0.5em 0;
 }
+
 .grid > div {
   padding: 0.3em;
   background: white;
   border-bottom: 1px solid #ccc;
   text-align: center;
 }
+
 .clickable {
   cursor: pointer;
   user-select: none;
 }
+
 .stat-btn {
   display: inline-block;
   width: 1.2em;
@@ -230,13 +228,11 @@ body {
   font-weight: bold;
 }
 
-/* make any stat‐cell clickable */
 .clickableStats {
   cursor: pointer;
   user-select: none;
 }
 
-/* ✓/✗ buttons next to made/miss counts */
 .addShot {
   cursor: pointer;
   margin: 0 .25rem;
@@ -244,20 +240,17 @@ body {
   user-select: none;
 }
 
-/* the number under each ✓/✗ */
 .count {
   display: block;
   margin-top: .25rem;
   font-size: .9rem;
 }
 
-/* align legend items in viewer */
 .legend li {
   display: flex;
   align-items: center;
 }
 
-/* container for the viewer’s stats‐summary table */
 .stats-view {
   max-width: 800px;
   margin: 2rem auto;
@@ -267,17 +260,15 @@ body {
   background: rgba(128, 128, 128, 0.8);
 }
 
-/* ✓ should be green, ✗ should be black */
-.addShot.tick { color: #4CBB17; }   /* green */
-.addShot.miss { color: #000; }      /* black */
+.addShot.tick { color: #295a12; }  
+.addShot.miss { color: #000; }    
 
-/* remove pointer cursor from attempts cells */
 .stats-table td:not(.clickableStats) {
   cursor: default;
 }
 
 .status-on {
-  background-color: #4CBB17 !important;
+  background-color: #295a12 !important;
 }
 #court {
   display: none;
