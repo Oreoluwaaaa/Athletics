@@ -73,7 +73,7 @@ smartAthletics/
 
 Both `Men/data.js` and `Women/data.js` are generated from a cumulative CSV maintained by an external webscraper (not part of this repository). To refresh the simulator data:
 
-1. **Run the external scraper** to produce or append to `cumulative_stats.csv`.  
+1. **Run the external scraper** to produce `cumulative_stats.csv`.  
 2. **Convert CSV → JSON**: Use any online CSV-to-JSON tool to transform `cumulative_stats.csv` into JSON.  
 3. Wrap the resulting array in a JS module by adding `export default [ … ];` at the top.  
 4. Place the generated `data.js` files under their respective `Men/` or `Women/` folders.
@@ -107,7 +107,3 @@ The rosters for Men’s and Women’s teams (and opponents) live in `stats-page/
   - **Simulator:** regenerate via CSV→JSON pipeline only.  
   - **Stats Page:** hand-edit only roster files.  
 - Test changes in-browser to confirm relative imports and asset loading.
-
----
-
-Feel free to dive in—each directory is self-contained, and no extra tooling is required beyond a browser (and the external Python environment for simulator data). Happy coding!
